@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    width : 500px;
+    margin: 50px auto;
+}
+
+h1 {
+    width : 500px;
+    background-color: tomato;
+    color : white;
+    text-align: center;
+}
+
+input {
+    width : 498px;
+    height: 30px;
+    margin : 0 auto;
+    outline: none;
+    border : 1px solid tomato;
+}
+
+.diary-list>li {
+    width : 500px;
+    height: 30px;
+    margin-bottom: 5px;
+    background-color: #ffd9c0;
+    line-height: 30px;
+}
+
+li {
+    list-style: none;
+}
