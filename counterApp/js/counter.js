@@ -3,21 +3,26 @@
     const value = document.querySelector('.couter-value');
     const resetbtn = document.querySelector('.reset');
 
+
     let num = 0;
+
+    const sum = function(){
+        value.textContent = num;
+    }
 
     const increment = function (){
         num++;
-        value.innerHTML = num;
+        sum();
     }
 
     const decrement = function (){
         num--;
-        value.innerHTML = num;
+        sum();
     }
 
     const reset = function (){
         num = 0;
-        value.innerHTML = num;
+        sum();
     }
 
     minus.addEventListener('click',decrement);
