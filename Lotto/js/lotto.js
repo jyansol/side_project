@@ -12,11 +12,14 @@ const randomNum = () => {
 randomNum();
 console.log(randomArr);
 
-const buyLotto = (money) => {
-  if( ){
-    randomNum();
+const buyLotto = (money, lotto) => {
+  const autoNum = lotto / money;
+  for (i = 0; i < autoNum; i++) {
+    console.log(autoNum);
   }
 };
+
+buyLotto(1000, 14000);
 
 //1000원일때 1개의 배열 생성
 
