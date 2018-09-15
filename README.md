@@ -1,6 +1,6 @@
 # side_project
 
-1. counterAPP
-1. [DiartAPP](https://github.com/jyansol/side_project/tree/master/counterApp)
-1. LottoAPP
-1. 생성자연습
+1. [CounterAPP](https://github.com/jyansol/side_project/tree/master/counterApp)
+1. [DiaryAPP](https://github.com/jyansol/side_project/tree/master/DiaryApp)
+1. [LottoAPP](https://github.com/jyansol/side_project/tree/master/Lotto)
+1. [생성자연습]()
