@@ -17,8 +17,24 @@
         <li>1990.04.06</li>
         <li>Seoul, Korea</li>
         <li>hahn0406@gmail.com</li>
+        <li class="info">info</li>
       </ul>
     </div>
+    <script>
+      const github = "https://api.github.com/users/jyansol";
+      let infos = {};
+
+      fetch(github)
+        .then(blob => blob.json())
+        .then(data => infos = data);
+
+      window.onload = function() {
+        const myInfo = document.querySelector('.info');
+        console.log(myInfo);
+        myInfo.textContent = infos.name;
+        console.log(infos);
+      }
+    </script>
   </body>
 
 </html>

@@ -2,11 +2,15 @@
 ** 문제 1. 생성자
  */
 
-function Person(n, a, l) {
-  this.name = n;
-  this.age = a;
-  this.live = l;
+function Person(name, age, live) {
+  this.name = name;
+  this.age = age;
+  this.live = live;
 }
+
+// const Person = function (name, age, live) {
+
+// }
 
 Person.prototype.sayInfo = function() {
   return this.name + '님이 사는 곳은' + this.live + '이며 나이는' + this.age + '세 입니다.';
@@ -21,14 +25,9 @@ console.log(person2.sayInfo());
 /*
 ** 문제 2. 프로토타입
  */
-function String(str) {
-  this.string = str;
-}
 
 String.prototype.sayString = function() {
-  return this.string + '을 입력하셨네요.';
+  return this + '을 입력하셨네요.';
 };
 
-const str = new String('문자열');
-
-console.log(str.sayString());
+console.log('문자열'.sayString());
