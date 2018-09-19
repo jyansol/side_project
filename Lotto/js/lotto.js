@@ -1,7 +1,7 @@
 //의미있는 숫자
 
-let randomArr = [];
-let luckyNum = [];
+const randomArr = [];
+const luckyNum = [];
 const seletedNum = 6;
 const lottoPrice = 1000;
 
@@ -25,21 +25,25 @@ const buyLottos = (money) => {
 buyLottos(14000);
 
 // 중복숫자 안되게
-const notOverLap = () => {
-  for (j = 0; j < i; j++) {
-    if (randomArr[i] === randomArr[j]) {
-      i = i - 1;
-      break;
-    }
-  }
-};
+// 코드 분석
+const notOverLap = () => {};
 notOverLap();
 
 //오늘의 행운번호
-const setLuckyNum = () => {};
-
+const setLuckyNum = () => {
+  for (i = 0; i < seletedNum; i++) {
+    luckyNum[i] = Math.floor(Math.random() * 44) + 1;
+  }
+};
 setLuckyNum();
 
-console.log('dd');
+console.log('행운번호' + luckyNum + '입니다.');
 console.log(luckyNum);
+
 // []랑 []랑 같으면
+// const myNum = () => {
+//   if () {
+//     console.log('is');
+//   }
+// };
+// myNum();
