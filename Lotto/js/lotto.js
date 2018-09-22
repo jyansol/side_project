@@ -1,4 +1,6 @@
-//의미있는 숫자
+//grid 복습
+//js30 복습
+//lotto, constructor
 
 const randomArr = [];
 const luckyNum = [];
