@@ -13,11 +13,8 @@
     <div class="container">
       <ul class="profile">
         <li>image</li>
-        <li>JIHAHNSOL</li>
-        <li>1990.04.06</li>
-        <li>Seoul, Korea</li>
-        <li>hahn0406@gmail.com</li>
-        <li class="info">info</li>
+        <input type="text" name="github" value="github ID를 입력하세요.">
+        <button>Click!</button>
       </ul>
     </div>
     <script>
@@ -29,9 +26,8 @@
         .then(data => infos = data);
 
       window.onload = function() {
-        const myInfo = document.querySelector('.info');
-        console.log(myInfo);
-        myInfo.textContent = infos.name;
+        //infos(객체) => 윈도우 화면에 보여지게
+        document.write(infos);
         console.log(infos);
       }
     </script>
