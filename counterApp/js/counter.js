@@ -28,3 +28,7 @@
     minus.addEventListener('click',decrement);
     plus.addEventListener('click',increment);
     resetbtn.addEventListener('click',reset);
+
+
+
+

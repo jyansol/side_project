@@ -11,25 +11,73 @@
 
   <body>
     <div class="container">
+
+      <div class="inputContainer">
+        <input type="text" placeholder="GitHub ID를 입력하세요." autofocus="" class="userIdVal">
+        <button class="btn">Click!</button>
+      </div>
       <ul class="profile">
-        <li>image</li>
-        <input type="text" name="github" value="github ID를 입력하세요.">
-        <button>Click!</button>
+        <img src="" alt="profileImg" class="avatar">
+        <li class="name">name</li>
+        <li class="githubUrl">githubUrl</li>
+        <!-- <li class="location">location</li> -->
+        <!-- location 버그 -->
+        <li class="email">email</li>
+        <li class="followers">followers</li>
       </ul>
     </div>
     <script>
-      const github = "https://api.github.com/users/jyansol";
+      const userIdVal = document.querySelector('.userIdVal');
+      let userId;
       let infos = {};
 
-      fetch(github)
-        .then(blob => blob.json())
-        .then(data => infos = data);
+      const avatar = document.querySelector('.avatar');
+      const name = document.querySelector('.name');
+      const githubUrl = document.querySelector('.githubUrl');
+      const email = document.querySelector('.email');
+      const followers = document.querySelector('.followers');
+      const btn = document.querySelector('.btn');
 
-      window.onload = function() {
-        //infos(객체) => 윈도우 화면에 보여지게
-        document.write(infos);
-        console.log(infos);
+
+      const githubInfoView = () => {
+        const userUrl = infos.avatar_url;
+        const avatarPic = document.querySelector('.avatar').setAttribute('src', userUrl);
+
+        userId = userIdVal.value;
+        let github = `https://api.github.com/users/${userId}`;
+
+        fetch(github)
+          .then(blob => blob.json())
+          .then(data => infos = data);
+        console.log(github);
+        name.textContent = infos.name;
+        // githubUrl.textContent = infos.name;
+        // name.textContent = infos.name;
+        // name.textContent = infos.name;
       }
+      btn.addEventListener('click', githubInfoView);
+
+
+      // window.onload = function() {
+      //   const userName = infos.id;
+      //   const userUrl = infos.avatar_url;
+      //   console.log(infos);
+      //   console.log(infos.name);
+
+      //   let avatarPic = document.querySelector('.avatar').setAttribute('src', userUrl);
+
+
+
+      //   avatar.textContent = avatarUrl;
+      //   avatar.textContent = infos.name;
+      //   avatar.textContent = infos.name;
+      //   avatar.textContent = infos.name;
+
+      // }
+
+
+
+
     </script>
   </body>
 
