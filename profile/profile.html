@@ -20,8 +20,6 @@
         <img src="" alt="profileImg" class="avatar">
         <li class="name">name</li>
         <li class="githubUrl">githubUrl</li>
-        <!-- <li class="location">location</li> -->
-        <!-- location 버그 -->
         <li class="email">email</li>
         <li class="followers">followers</li>
       </ul>
@@ -30,7 +28,6 @@
       const userIdVal = document.querySelector('.userIdVal');
       let userId;
       let infos = {};
-
       const avatar = document.querySelector('.avatar');
       const name = document.querySelector('.name');
       const githubUrl = document.querySelector('.githubUrl');
@@ -38,14 +35,11 @@
       const followers = document.querySelector('.followers');
       const btn = document.querySelector('.btn');
 
-
       const githubInfoView = () => {
         const userUrl = infos.avatar_url;
         const avatarPic = document.querySelector('.avatar').setAttribute('src', userUrl);
-
         userId = userIdVal.value;
         let github = `https://api.github.com/users/${userId}`;
-
         fetch(github)
           .then(blob => blob.json())
           .then(data => infos = data);
@@ -56,12 +50,6 @@
         // name.textContent = infos.name;
       }
       btn.addEventListener('click', githubInfoView);
-
-
-
-
-
-
     </script>
   </body>
 
