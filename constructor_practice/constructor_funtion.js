@@ -26,11 +26,13 @@
 //
 class Person {
   constructor({ name, age, live }) {
+    //객체의 속성
     //ES6 : ({}) 객체를 넣음, 그래서 받을 때도 객체로 받아야함. 가독성 높임.
     this.name = name;
     this.age = age;
     this.live = live;
   }
+  //객체의 행위
   sayInfo() {
     return `${this.name}님이 사는 곳은 ${this.live}이며, 나이는${this.age}세 입니다.`;
   }
