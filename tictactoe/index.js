@@ -19,34 +19,56 @@
 // ]
 
 //빙고!
-// 1이랑 2랑 둘다 있을 때
+//가로
 function ticTacToe(arr) {
-  //가로
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
-      return arr[i][j] === 1 || arr[i][j] === 2 ? 1 : 2;
+      if (arr[i][j] === 1) {
+        return 1;
+      } else if (arr[i][j] === 2) {
+        return 2;
+      }
     }
   }
 
   //세로
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
-      return arr[j][i] === 1 || arr[j][i] === 2 ? 1 : 2;
+      if (arr[j][i] === 1) {
+        return 1;
+      } else if (arr[j][i] === 2) {
+        return 2;
+      }
+    }
+  }
+
+
+  {
+    for (let j = 0; j < 3; j++) {
+      if (arr[j][j] === 1) {
+        return 1;
+      } else if (arr[j][j] === 2) {
+        return 2;
+      }
     }
   }
 
   {
     for (let j = 0; j < 3; j++) {
-      return arr[j][j] === 1 || arr[j][j] === 2 ? 1 : 2;
-    }
-  }
-
-  {
-    for (let j = 0; j < 3; j++) {
-      return arr[j][2 - j] === 1 || arr[j][2 - j] === 2 ? 1 : 2;
+      if (arr[j][2 - j] === 1) {
+        return 1;
+      } else if (arr[j][2 - j] === 2) {
+        return 2;
+      }
     }
   }
   return 0;
 }
 
-ticTacToe([[2, 2, 0], [1, 1, 1], [1, 0, 0]]);
+
+
+ticTacToe([
+  [0, 2, 1],
+  [0, 1, 1],
+  [1, 1, 0]
+]) // 1
