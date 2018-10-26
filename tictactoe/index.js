@@ -22,11 +22,12 @@
 //가로
 function ticTacToe(arr) {
   for (let i = 0; i < 3; i++) {
+    let checked = 0;
     for (let j = 0; j < 3; j++) {
       if (arr[i][j] === 1) {
-        return 1;
+        checked = 1;
       } else if (arr[i][j] === 2) {
-        return 2;
+        checked = 2;
       }
     }
   }
@@ -42,7 +43,7 @@ function ticTacToe(arr) {
     }
   }
 
-
+  //대각선 \
   {
     for (let j = 0; j < 3; j++) {
       if (arr[j][j] === 1) {
@@ -53,6 +54,7 @@ function ticTacToe(arr) {
     }
   }
 
+  //대각선 /
   {
     for (let j = 0; j < 3; j++) {
       if (arr[j][2 - j] === 1) {
