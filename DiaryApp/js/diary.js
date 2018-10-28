@@ -18,4 +18,5 @@ const key = function (e){
 }
 
 
-  input.addEventListener('keypress', key);
+  
+input.addEventListener('keypress', key);
