@@ -11,6 +11,7 @@ class Animals {
 class Person extends Animals {
   constructor({ say, ...rest }) {
     super(rest);
+    //super 부모클래스 생성자 호출
     this.say = say;
   }
   introduce() {
