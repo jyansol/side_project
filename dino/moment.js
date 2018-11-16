@@ -1,5 +1,6 @@
 const sendBtn = document.querySelector('.sendBtn');
 const input = document.querySelector('input');
+var moment = require('moment');
 
 const key = (e) => {
   console.log(e.target.value);
