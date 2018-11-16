@@ -100,3 +100,4 @@ const me = new Family({ name: '쟌솔', age: 29 });
 const pika = new Family({ name: '피카', age: 6 });
 
 console.log(me.sayName());
+console.log(pika.sayName());
