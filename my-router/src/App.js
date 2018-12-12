@@ -102,4 +102,6 @@ class App extends React.Component {
 //전체를 감싸는 BrowserRouter
 //SPA!
 
+// 검색페이지와 결과페이지
+
 export default App;
