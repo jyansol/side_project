@@ -21,3 +21,16 @@ function secondPass() {
     countDiv.innerHTML = 'Done';
   }
 }
+
+
+// [ 2 ]
+// var time = 360;
+
+// function countdown() {
+//   var minutes = Math.floor(time / 60);
+//   var seconds = time % 60;
+//   document.body.innerHTML = minutes + ':' + seconds; // prints the countdown in the HTML
+//   time = time - 1;
+// }
+
+// setInterval(countdown, 1000);
